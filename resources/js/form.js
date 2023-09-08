@@ -176,8 +176,10 @@ $(() => {
      * @param {object} oFormData
      */
     function submitFields(oFormData) {
+        let sAlertMessage = 'Added';
         if (sMethod === 'PUT') {
             oFormData['kangaroo_id'] = iCurrentId;
+            sAlertMessage = 'Modified';
         }
 
         $.ajax({
@@ -185,7 +187,12 @@ $(() => {
             method: sMethod,
             data: oFormData,
             success: function() {
+                alert('Successfully ' + sAlertMessage);
                 window.location.href = '/';
+            },
+            error: function() {
+                alert('Something went wrong');
+                location.reload();
             }
         })
     }
