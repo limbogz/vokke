@@ -51,18 +51,6 @@ $(() => {
                     alignment: 'center'
                 },
                 {
-                    dataField: 'nickname',
-                    caption: 'Nickname',
-                    alignment: 'center',
-                    cellTemplate: function(oContainer, oOptions) {
-                        if (!oOptions.data.nickname) {
-                            $(oContainer).text('-');
-                        } else {
-                            $(oContainer).text(oOptions.data.nickname);
-                        }
-                    }
-                },
-                {
                     dataField: 'weight',
                     caption: 'Weight',
                     alignment: 'center'
@@ -77,18 +65,6 @@ $(() => {
                     dataField: 'gender',
                     caption: 'Gender',
                     alignment: 'center'
-                },
-                {
-                    dataField: 'color',
-                    caption: 'Color',
-                    alignment: 'center',
-                    cellTemplate: function(oContainer, oOptions) {
-                        if (!oOptions.data.color) {
-                            $(oContainer).text('-');
-                        } else {
-                            $(oContainer).text(oOptions.data.color);
-                        }
-                    }
                 },
                 {
                     dataField: 'friendliness',

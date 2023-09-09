@@ -123,6 +123,11 @@ $(() => {
         return bValidParam;
     }
 
+    /**
+     * validateValidFields
+     * @param {object} oFormData
+     * @returns {boolean}
+     */
     function validateValidFields(oFormData) {
         let bValidParam = true;
         let oErrorMessages = {
