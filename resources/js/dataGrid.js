@@ -1,27 +1,24 @@
-/**
- * oDataList
- * Functionalities for the Data Grid
- * @since 2023.09.08
- */
-var oDataList = {
+$(() => {
+    getDataList();
+
     /**
      * getDataList
      */
-    getDataList: function() {
+    function getDataList() {
         $.ajax({
             type: "GET",
             url: "/api/kangaroo",
             success: function(oResult) {
-                oDataList.setDataGrid(oResult)
+                setDataGrid(oResult)
             }
         })
-    },
+    }
 
     /**
      * setDataGrid
      * @param {object} oData
      */
-    setDataGrid: function(oData) {
+    function setDataGrid(oData) {
         $('#gridContainer').dxDataGrid({
             dataSource: oData,
             showBorders: true,
@@ -129,6 +126,4 @@ var oDataList = {
             ],
         })
     }
-}
-
-oDataList.getDataList();
+});
